@@ -42,7 +42,7 @@ def generate_test_pickling_of_galois_fields():
         poly = galois.irreducible_poly(prime, degree, method="random")
         alpha = galois.primitive_element(poly, method="random")
         field = galois.GF(prime, degree, primitive_element=alpha, irreducible_poly=poly)
-        info = dict(field=field, order=(prime ** degree), primitive_element=int(alpha), irreducible_poly=str(poly))
+        info = dict(field=field, order=(prime**degree), primitive_element=int(alpha), irreducible_poly=str(poly))
         data.append(info)
 
     # Save all of this info to a pickle file.
